@@ -28,4 +28,6 @@ dependencies {
     testImplementation 'org.springframework.kafka:spring-kafka-test'
 
     implementation 'com.alibaba:fastjson:1.2.58'
+
+    implementation 'com.google.guava:guava:28.0-jre'
 }

@@ -1,6 +1,5 @@
 package com.fengwenyi.erwin_kafka_simple.producer;
 
-import com.fengwenyi.erwin_kafka_simple.common.MessageEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.springframework.kafka.support.SendResult;
