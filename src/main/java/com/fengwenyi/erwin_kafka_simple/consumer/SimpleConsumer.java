@@ -7,6 +7,12 @@ import org.springframework.stereotype.Component;
 
 /**
  * 简单消费者
+ * @KafkaListener,
+ *
+ * id: 有的话，会覆盖 groupId
+ *
+ * groupId:消费组ID
+ *
  * @author Erwin Feng
  * @since 2019-06-28 20:09
  */
@@ -19,7 +25,7 @@ public class SimpleConsumer {
 //        log.info(message);
     }
 
-    @KafkaListener(topics = "${kafka.topic.default}")
+    @KafkaListener(id = "erwin-kafka-demo-group-simple", topics = "${kafka.topic.default}")
     public void receiver(ConsumerRecord<?, ?> record) {
         Object key = record.key();
         if (key != null) {

@@ -24,7 +24,7 @@ public class BatchConsumer {
     /**
      * 监听topic5,批量消费
      */
-    @KafkaListener(topics = "${kafka.topic.default}", containerFactory = "batchFactory")
+    @KafkaListener(id = "erwin-kafka-demo-group-batch", topics = "${kafka.topic.default}", containerFactory = "batchFactory")
     public void listenApiLog(List<String> records) {
         records.forEach(this::handleMessage);
     }
